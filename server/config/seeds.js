@@ -11,7 +11,6 @@ db.once('open', async () => {
     { name: 'White Shirts' },
     { name: 'Graphic Tees' }
   ]);
-  console.log(categories);
   console.log('categories seeded');
 
   await Product.deleteMany();
@@ -30,7 +29,7 @@ db.once('open', async () => {
       quantity: 5
     }
   ]);
-
+  console.log(products[0].category);
   console.log('products seeded');
 
   await User.deleteMany();
