@@ -29,7 +29,6 @@ db.once('open', async () => {
       quantity: 5
     }
   ]);
-  console.log(products[0].category);
   console.log('products seeded');
 
   await User.deleteMany();
