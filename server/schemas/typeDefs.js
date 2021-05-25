@@ -24,6 +24,15 @@ type Category {
 type Checkout {
     session: ID
 }
+type Product {
+    _id: ID
+    name: String
+    description: String
+    image: String
+    quantity: Int
+    price: Float
+    category: Category
+}
 type Query {
     categories: [Category]
     products(category: ID, name: String): [Product]
