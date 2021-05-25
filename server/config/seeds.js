@@ -11,7 +11,7 @@ db.once('open', async () => {
     { name: 'White Shirts' },
     { name: 'Graphic Tees' }
   ]);
-
+  console.log(categories);
   console.log('categories seeded');
 
   await Product.deleteMany();
@@ -22,7 +22,10 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'cookie-tin.jpg',
-      category: categories[0]._id,
+      category: [
+        categories[0],
+        categories[2]
+      ],
       price: 15.99,
       quantity: 5
     }
