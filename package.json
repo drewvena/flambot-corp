@@ -8,8 +8,7 @@
     "start:prod": "cd server && npm start",
     "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
-    "heroku-postbuild": "cd client && npm run build && cd ../server && npm run seed"
+    "seed": "cd server && npm run seed"
   },
   "repository": {
     "type": "git",
@@ -25,9 +24,6 @@
     "concurrently": "^6.2.0"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "graphql": "^15.5.0",
-    "if-env": "^1.0.4",
-    "mongoose": "^5.12.11"
+    "if-env": "^1.0.4"
   }
 }
