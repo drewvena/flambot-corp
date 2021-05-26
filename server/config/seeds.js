@@ -1,22 +1,18 @@
 const db = require('./connection');
-const { User, Product, ColorCategory, ShirtTypeCategory } = require('../models');
+const { User, Product, Category } = require('../models');
 
 db.once('open', async () => {
-  await ColorCategory.deleteMany();
-  await ShirtTypeCategory.deleteMany();
+  await Category.deleteMany();
 
-  const colorCategories = await ColorCategory.insertMany([
+  const categories = await Category.insertMany([
     { name: 'Black Shirts' },
     { name: 'White Shirts' },
     { name: 'Graphic Tees' }
   ]);
 
-  const shirtTypeCategory = await ShirtTypeCategory.insertMany([
-    { name: 'Crew Neck Tee' },
-    { name: 'Long Sleeve Tee' }
-  ]);
 
-  console.log('categories seeded', colorCategories, shirtTypeCategory);
+
+  console.log('categories seeded');
 
   await Product.deleteMany();
 
@@ -26,8 +22,7 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'cookie-tin.jpg',
-      color: colorCategories[0],
-      shirtType: shirtTypeCategory[0],
+      category: categories[0]._id,
       price: 15.99,
       quantity: 5
     },
@@ -36,8 +31,7 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'cookie-tin.jpg',
-      color: colorCategories[1],
-      shirtType: shirtTypeCategory[0],
+      category: categories[1]._id,
       price: 15.99,
       quantity: 5
     },
@@ -46,8 +40,7 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'cookie-tin.jpg',
-      color: colorCategories[1],
-      shirtType: shirtTypeCategory[1],
+      category: categories[1]._id,
       price: 20.99,
       quantity: 5
     },
@@ -56,8 +49,7 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'cookie-tin.jpg',
-      color: colorCategories[0],
-      shirtType: shirtTypeCategory[1],
+      category: categories[0]._id,
       price: 20.99,
       quantity: 5
     },
@@ -66,8 +58,7 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'cookie-tin.jpg',
-      color: colorCategories[2],
-      shirtType: shirtTypeCategory[1],
+      category: categories[2]._id,
       price: 29.99,
       quantity: 3
     },

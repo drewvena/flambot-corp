@@ -19,28 +19,24 @@ function Filter() {
     }, [data, dispatch]);
 
     function click(id) {
-        if(!state.currentCategory.includes(id)) {
-            dispatch({
-                type: UPDATE_CURRENT_CATEGORY,
-                currentCategory: id
-            });
-        } else {
-            dispatch({
-                type: REMOVE_CURRENT_CATEGORY,
-                currentCategory: id
-            })
-        }
+        dispatch({
+            type: UPDATE_CURRENT_CATEGORY,
+            currentCategory: id
+        }); 
     }
     
     return (
         <fieldset>
             <legend>Filter:</legend>
+            <input type='radio' id='all' value='all' name='category' onClick={() => {click('')}}/>
+            <label htmlFor='all'>All</label>
             {state.categories.map(category => (
                 <div>
+                    <input key={category._id} type='radio' id={category._id} value={category.name} name='category' onClick={() => {click(category._id)}}/>
                     <label htmlFor={category.name}>{category.name}</label>
-                    <input type='checkbox' id={category._id} value={category.name} name={category.name} onClick={() => {click(category._id)}}/>
                 </div>
             ))}
+
         </fieldset>
     )
 }

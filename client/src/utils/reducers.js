@@ -34,7 +34,7 @@ export const reducer = (state = {
         case UPDATE_CURRENT_CATEGORY:
             return {
                 ...state,
-                currentCategory: [...state.currentCategory, action.currentCategory]
+                currentCategory: action.currentCategory
             };
         case REMOVE_CURRENT_CATEGORY:
             let newCat = state.currentCategory.filter(category => {

@@ -31,7 +31,7 @@ type Product {
     image: String
     quantity: Int
     price: Float
-    category: [Category]
+    category: Category
 }
 type Query {
     categories: [Category]

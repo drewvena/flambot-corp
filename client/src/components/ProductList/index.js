@@ -19,10 +19,11 @@ function ProductList() {
     }, [data, dispatch]);
 
     function filterProducts() {
-        if(state.currentCategory.length === 0) {
+        console.log(state.products);
+        if(state.currentCategory === '') {
             return state.products;
         }
-        return [];    
+        return state.products.filter(product => product.category._id === state.currentCategory);   
     };
     
     return (
