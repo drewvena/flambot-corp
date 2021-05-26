@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
+import { StoreProvider } from './utils/GlobalState';
 import ApolloClient from 'apollo-boost';
 import Home from "./pages/Home";
 // import Detail from "./pages/Detail";
@@ -25,7 +26,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Home />
+      <StoreProvider>
+        <Home />
+      </StoreProvider>
     </ApolloProvider>
   );
 }
