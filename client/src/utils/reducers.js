@@ -7,7 +7,8 @@ import {
     REMOVE_FROM_CART,
     UPDATE_CART_QUANTITY,
     CLEAR_CART,
-    TOGGLE_CART
+    TOGGLE_CART,
+    REMOVE_CURRENT_CATEGORY
 } from './actions';
 import { useReducer } from 'react';
 
@@ -33,8 +34,16 @@ export const reducer = (state = {
         case UPDATE_CURRENT_CATEGORY:
             return {
                 ...state,
-                currentCategory: action.currentCategory
+                currentCategory: [...state.currentCategory, action.currentCategory]
             };
+        case REMOVE_CURRENT_CATEGORY:
+            let newCat = state.currentCategory.filter(category => {
+                return category !== action.currentCategory
+            });
+            return {
+                ...state,
+                currentCategory: newCat
+            }
         case ADD_TO_CART:
             return {
                 ...state,
