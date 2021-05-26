@@ -1,17 +1,22 @@
 const db = require('./connection');
-const { User, Product, Category } = require('../models');
+const { User, Product, ColorCategory, ShirtTypeCategory } = require('../models');
 
 db.once('open', async () => {
-  await Category.deleteMany();
+  await ColorCategory.deleteMany();
+  await ShirtTypeCategory.deleteMany();
 
-  const categories = await Category.insertMany([
-    { name: 'Crew Neck Tee' },
-    { name: 'Long Sleeve Tee' },
+  const colorCategories = await ColorCategory.insertMany([
     { name: 'Black Shirts' },
     { name: 'White Shirts' },
     { name: 'Graphic Tees' }
   ]);
-  console.log('categories seeded');
+
+  const shirtTypeCategory = await ShirtTypeCategory.insertMany([
+    { name: 'Crew Neck Tee' },
+    { name: 'Long Sleeve Tee' }
+  ]);
+
+  console.log('categories seeded', colorCategories, shirtTypeCategory);
 
   await Product.deleteMany();
 
@@ -21,10 +26,8 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'cookie-tin.jpg',
-      category: [
-        categories[0],
-        categories[2]
-      ],
+      color: colorCategories[0],
+      shirtType: shirtTypeCategory[0],
       price: 15.99,
       quantity: 5
     },
@@ -33,10 +36,8 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'cookie-tin.jpg',
-      category: [
-        categories[0],
-        categories[3]
-      ],
+      color: colorCategories[1],
+      shirtType: shirtTypeCategory[0],
       price: 15.99,
       quantity: 5
     },
@@ -45,10 +46,8 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'cookie-tin.jpg',
-      category: [
-        categories[1],
-        categories[3]
-      ],
+      color: colorCategories[1],
+      shirtType: shirtTypeCategory[1],
       price: 20.99,
       quantity: 5
     },
@@ -57,10 +56,8 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'cookie-tin.jpg',
-      category: [
-        categories[1],
-        categories[2]
-      ],
+      color: colorCategories[0],
+      shirtType: shirtTypeCategory[1],
       price: 20.99,
       quantity: 5
     },
@@ -69,15 +66,13 @@ db.once('open', async () => {
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'cookie-tin.jpg',
-      category: [
-        categories[1],
-        categories[4]
-      ],
+      color: colorCategories[2],
+      shirtType: shirtTypeCategory[1],
       price: 29.99,
       quantity: 3
     },
   ]);
-  console.log('products seeded');
+  console.log('products seeded',  products);
 
   await User.deleteMany();
 

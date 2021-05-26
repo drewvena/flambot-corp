@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-const Category = require('./Category');
+const ColorCategory = require('./ColorCategory');
+const ShirtTypeCategory = require('./ShirtTypeCategory');
 
 const productSchema = new Schema({
   name: {
@@ -25,7 +26,8 @@ const productSchema = new Schema({
     min: 0,
     default: 0
   },
-  category: [Category.schema]
+  color: ColorCategory.schema,
+  shirtType: ShirtTypeCategory.schema,
 });
 
 const Product = mongoose.model('Product', productSchema);

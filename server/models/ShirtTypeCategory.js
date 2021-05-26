@@ -10,6 +10,6 @@ const categorySchema = new Schema({
   }
 });
 
-const Category = mongoose.model('Category', categorySchema);
+const ShirtTypeCategory = mongoose.model('ShirtTypeCategory', categorySchema);
 
-module.exports = Category;
+module.exports = ShirtTypeCategory;
