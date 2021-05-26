@@ -10,6 +10,7 @@ export const QUERY_PRODUCTS = gql`
       quantity
       category {
         name
+        _id
       }
     }
   }

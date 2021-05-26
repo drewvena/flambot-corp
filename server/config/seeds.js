@@ -27,7 +27,55 @@ db.once('open', async () => {
       ],
       price: 15.99,
       quantity: 5
-    }
+    },
+    {
+      name: 'White Shirt',
+      description:
+        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+      image: 'cookie-tin.jpg',
+      category: [
+        categories[0],
+        categories[3]
+      ],
+      price: 15.99,
+      quantity: 5
+    },
+    {
+      name: 'White Long-Sleeve Shirt',
+      description:
+        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+      image: 'cookie-tin.jpg',
+      category: [
+        categories[1],
+        categories[3]
+      ],
+      price: 20.99,
+      quantity: 5
+    },
+    {
+      name: 'Black Long-Sleeve Shirt',
+      description:
+        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+      image: 'cookie-tin.jpg',
+      category: [
+        categories[1],
+        categories[2]
+      ],
+      price: 20.99,
+      quantity: 5
+    },
+    {
+      name: 'Graphic Long-Sleeve Shirt',
+      description:
+        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+      image: 'cookie-tin.jpg',
+      category: [
+        categories[1],
+        categories[4]
+      ],
+      price: 29.99,
+      quantity: 3
+    },
   ]);
   console.log('products seeded');
 

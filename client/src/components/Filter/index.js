@@ -6,8 +6,7 @@ import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY, REMOVE_CURRENT_CATEGORY } f
 
 function Filter() {
     const [state, dispatch] = useStoreContext();
-    console.log(state);
-    const { categories } = state.categories;
+    
     const { loading, data } = useQuery(QUERY_CATEGORIES);
     
     useEffect(() => {
@@ -32,6 +31,7 @@ function Filter() {
             })
         }
     }
+    
     return (
         <fieldset>
             <legend>Filter:</legend>
