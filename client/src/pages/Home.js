@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { QUERY_ALL_PRODUCTS } from '../utils/queries';
+import React from "react";
 import { useQuery } from '@apollo/react-hooks';
-import { useStoreContext } from '../utils/GlobalState';
-
+import { QUERY_PRODUCTS } from '../utils/queries';
 
 const Home = () => {
-  
+  const { loading, data } = useQuery(QUERY_PRODUCTS);
+  const products = data.products || [];
+  if(!loading) {
+    const products = data.products;
+    console.log(products);
+  }
   return (
   <div className="container">
-      <h2>Hello</h2>
+      {products.map(product => (
+        <h2>{product.name}</h2>
+      ))}
   </div>
   );
 };

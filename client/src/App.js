@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
@@ -20,7 +20,7 @@ const client = new ApolloClient({
       }
     })
   },
-  uri: 'https://localhost:3001/graphql',
+  uri: 'http://localhost:3001/graphql',
 });
 function App() {
   return (
