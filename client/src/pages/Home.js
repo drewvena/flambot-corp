@@ -7,7 +7,7 @@ const Home = () => {
   return (
   <div className="container">
     <Filter />
-    <ProductList />
+    <ProductList/>
   </div>
   );
 };

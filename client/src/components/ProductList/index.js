@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
+import ProductItem from '../ProductItem';
 
 function ProductList() {
     const [state, dispatch] = useStoreContext();
@@ -30,8 +31,7 @@ function ProductList() {
         <div>
             {filterProducts().map(product => (
                 <div>
-                    <h2>{product.name}</h2>
-                    <h4>{product.price}</h4>
+                    <ProductItem name={product.name}/>
                 </div>
             ))}
         </div>
