@@ -31,7 +31,14 @@ function ProductList() {
         <div>
             {filterProducts().map(product => (
                 <div>
-                    <ProductItem name={product.name}/>
+                    <ProductItem
+                        name={product.name}
+                        price={product.price}
+                        description={product.description}
+                        image={product.image}
+                        quantity={product.quantity}
+                        image={product.image}
+                    />
                 </div>
             ))}
         </div>

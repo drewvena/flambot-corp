@@ -42,7 +42,6 @@ function ProductItem(item) {
   return (
     <div>
         <p>{name}</p>
-  
       <div>
         <div>{quantity} {pluralize("item", quantity)} in stock</div>
         <span>${price}</span>

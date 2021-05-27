@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import { StoreProvider } from './utils/GlobalState';
 import ApolloClient from 'apollo-boost';
@@ -26,10 +26,20 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <StoreProvider>
-        <Nav />
-        <Home />
-      </StoreProvider>
+      <Router>
+        <StoreProvider>
+          <Nav />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            {/* <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/success" component={Success} />
+            <Route exact path="/orderHistory" component={OrderHistory} />
+            <Route exact path="/products/:id" component={Detail} />
+            <Route component={NoMatch} /> */}
+          </Switch>
+        </StoreProvider>
+      </Router>
     </ApolloProvider>
   );
 }
