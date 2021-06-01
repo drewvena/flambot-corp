@@ -41,7 +41,13 @@ function ProductItem(item) {
 
   return (
     <div>
+        <Link to={`/products/${_id}`}>
+        {/* <img
+          alt={name}
+          src={`/images/${image}`}
+        /> */}
         <p>{name}</p>
+      </Link>
       <div>
         <div>{quantity} {pluralize("item", quantity)} in stock</div>
         <span>${price}</span>
