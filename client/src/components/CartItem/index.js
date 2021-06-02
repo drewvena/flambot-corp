@@ -2,6 +2,8 @@ import React from 'react';
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import { Icon } from 'semantic-ui-react'
+
 
 const CartItem = ({ item }) => {
 
@@ -54,12 +56,12 @@ const CartItem = ({ item }) => {
             value={item.purchaseQuantity}
             onChange={onChange}
           />
-          <span
+          <span className="trash"
             role="img"
             aria-label="trash"
             onClick={() => removeFromCart(item)}
           >
-            🗑️
+            <Icon name="trash"/>
           </span>
         </div>
       </div>
