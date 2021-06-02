@@ -30,7 +30,7 @@ db.once('open', async () => {
       name: 'Cornhole',
       description:
         'Sometimes the wife has gotta let you loose! Let everyone know with this shirt!',
-        image: 'cornhole.jpg',
+        image: 'cornhole.png',
       category: categories[0]._id,
       price: 15.99,
       quantity: 5
@@ -39,7 +39,7 @@ db.once('open', async () => {
       name: 'Grumpy, Spoiled',
       description:
         "Born in a December? Crazy about your Man? Awesome wife? If you answered yes to all of these questions then you NEED this shirt for your husband! Let Melinda know she is not allowed to be on the same team as your husband during cornhole!",
-        image: 'grumpy.jpg',
+        image: 'grumpyman.jpg',
       category: categories[1]._id,
       price: 20.99,
       quantity: 5
@@ -58,6 +58,24 @@ db.once('open', async () => {
       description:
         'Tired of being underestimated as an old lady gardener who was born in April? Let everyone know with this tee!',
         image: 'lady.jpg',
+      category: categories[1]._id,
+      price: 29.99,
+      quantity: 3
+    },
+    {
+      name: 'Smooth by Santana',
+      description:
+        'Would you rather be listening to Smooth by Santana feat. Rob Thomas? Now is your chance to let everyone know.',
+        image: 'smooth.png',
+      category: categories[1]._id,
+      price: 29.99,
+      quantity: 3
+    },
+    {
+      name: '5 Things About My Wife',
+      description:
+        'Cut to the chase and tell everyone what they really need to know about your wife.',
+        image: 'mywife.jpeg',
       category: categories[1]._id,
       price: 29.99,
       quantity: 3
