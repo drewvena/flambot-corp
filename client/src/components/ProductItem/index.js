@@ -10,6 +10,7 @@ function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
 
   const {
+    image,
     name,
     _id,
     price,
@@ -42,10 +43,10 @@ function ProductItem(item) {
   return (
     <div>
         <Link to={`/products/${_id}`}>
-        {/* <img
+        <img
           alt={name}
           src={`/images/${image}`}
-        /> */}
+        />
         <p>{name}</p>
       </Link>
       <div>

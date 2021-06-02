@@ -21,7 +21,7 @@ db.once('open', async () => {
       name: 'Black Shirt',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+      image: 'ferret.jpg',
       category: categories[0]._id,
       price: 15.99,
       quantity: 5
@@ -30,7 +30,7 @@ db.once('open', async () => {
       name: 'White Shirt',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        image: 'ferret.jpg',
       category: categories[1]._id,
       price: 15.99,
       quantity: 5
@@ -39,7 +39,7 @@ db.once('open', async () => {
       name: 'White Long-Sleeve Shirt',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        image: 'ferret.jpg',
       category: categories[1]._id,
       price: 20.99,
       quantity: 5
@@ -48,7 +48,7 @@ db.once('open', async () => {
       name: 'Black Long-Sleeve Shirt',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        image: 'ferret.jpg',
       category: categories[0]._id,
       price: 20.99,
       quantity: 5
@@ -57,7 +57,7 @@ db.once('open', async () => {
       name: 'Graphic Long-Sleeve Shirt',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        image: 'ferret.jpg',
       category: categories[2]._id,
       price: 29.99,
       quantity: 3
