@@ -20,7 +20,7 @@ function ProductList() {
     }, [data, dispatch]);
 
     function filterProducts() {
-        console.log(state.products);
+        
         if(state.currentCategory === '') {
             return state.products;
         }
