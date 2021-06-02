@@ -181,6 +181,11 @@ ul {
   margin-bottom: var(--spacing-two);
 }
 
+.my-20 {
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
 .px-1 {
   padding-right: var(--spacing-one);
   padding-left: var(--spacing-one);

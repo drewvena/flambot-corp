@@ -2,6 +2,8 @@ import React from 'react';
 import Auth from '../../utils/auth';
 import { Link } from 'react-router-dom';
 import { Segment, Menu } from 'semantic-ui-react'
+import Cart from '../Cart';
+
 
 function Nav() {
   
@@ -42,8 +44,10 @@ function Nav() {
     }
 
   return (
-      <Menu inverted pagination fixed='top'>
+      <Menu inverted fixed='top'>
               {showNavigation()}
+              <Cart />
+
       </Menu>
   );
 }

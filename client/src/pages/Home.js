@@ -8,7 +8,6 @@ const Home = () => {
   <div className="container">
     <Filter />
     <ProductList/>
-    <Cart />
   </div>
   );
 };
