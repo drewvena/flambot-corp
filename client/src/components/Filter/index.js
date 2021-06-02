@@ -26,10 +26,12 @@ function Filter() {
     }
     
     return (
-        <fieldset>
-            <legend>Filter:</legend>
+        <fieldset className="flex-row space-between my-2">
+            {/* <legend>Filter:</legend> */}
+            <div>
             <input type='radio' id='all' value='all' name='category' onClick={() => {click('')}}/>
             <label htmlFor='all'>All</label>
+            </div>
             {state.categories.map(category => (
                 <div>
                     <input key={category._id} type='radio' id={category._id} value={category.name} name='category' onClick={() => {click(category._id)}}/>

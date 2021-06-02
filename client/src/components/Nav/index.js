@@ -11,12 +11,12 @@ function Nav() {
           <div>
             
             <ul>
-              <li>
+              <li className="px-2">
                 <Link to="/orderHistory">
                   Order History
                 </Link>
               </li>
-              <li>
+              <li className="px-2">
                 <a href="/" onClick={() => Auth.logout()}>
                   Logout
                 </a>
@@ -27,13 +27,13 @@ function Nav() {
         );
       } else {
         return (
-          <ul>
-            <li>
+          <ul className="flex-row">
+            <li className="px-2">
               <Link to="/signup">
                 Signup
               </Link>
             </li>
-            <li>
+            <li className="px-2">
               <Link to="/login">
                 Login
               </Link>
@@ -44,7 +44,7 @@ function Nav() {
     }
 
   return (
-      <header>
+      <header className="flex-row px-1 py-1">
           <h1>Flambot Corp</h1>
 
           <nav>
