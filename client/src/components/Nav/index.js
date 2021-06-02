@@ -1,56 +1,50 @@
 import React from 'react';
 import Auth from '../../utils/auth';
 import { Link } from 'react-router-dom';
-
+import { Segment, Menu } from 'semantic-ui-react'
 
 function Nav() {
   
   function showNavigation() {
       if (Auth.loggedIn()) {
         return (
-          <div>
-            
-            <ul>
-              <li className="px-2">
+          <Menu horizontal link inverted  size='massive' >
+            <Menu.Item header>Flambot Corp</Menu.Item>
+            <Menu.Item as='a'>
                 <Link to="/orderHistory">
                   Order History
                 </Link>
-              </li>
-              <li className="px-2">
+                </Menu.Item>
+              <Menu.Item as='a'>
                 <a href="/" onClick={() => Auth.logout()}>
                   Logout
                 </a>
-              </li>
-            </ul>
-          </div>
-          
+                </Menu.Item>
+              </Menu>
         );
       } else {
         return (
-          <ul className="flex-row">
-            <li className="px-2">
+          <Menu horizontal link inverted  size='massive' >
+            <Menu.Item header>Flambot Corp</Menu.Item>
+            <Menu.Item as='a'>
               <Link to="/signup">
                 Signup
               </Link>
-            </li>
-            <li className="px-2">
+            </Menu.Item>
+            <Menu.Item as='a'>
               <Link to="/login">
                 Login
               </Link>
-            </li>
-          </ul>
+            </Menu.Item>
+          </Menu>
         );
       }
     }
 
   return (
-      <header className="flex-row px-1 py-1">
-          <h1>Flambot Corp</h1>
-
-          <nav>
+      <Menu inverted pagination fixed='top'>
               {showNavigation()}
-          </nav>
-      </header>
+      </Menu>
   );
 }
 
