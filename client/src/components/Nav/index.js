@@ -1,7 +1,7 @@
 import React from 'react';
 import Auth from '../../utils/auth';
 import { Link } from 'react-router-dom';
-import { Segment, Menu } from 'semantic-ui-react'
+import { Menu, Icon } from 'semantic-ui-react'
 import Cart from '../Cart';
 
 
@@ -11,7 +11,7 @@ function Nav() {
       if (Auth.loggedIn()) {
         return (
           <Menu horizontal link inverted  size='massive' >
-            <Menu.Item header>Flambot Corp</Menu.Item>
+            <Menu.Item header><Icon name="globe"/>Flambot Corp </Menu.Item>
             <Menu.Item as='a'>
                 <Link to="/orderHistory">
                   Order History
@@ -27,7 +27,7 @@ function Nav() {
       } else {
         return (
           <Menu horizontal link inverted  size='massive' >
-            <Menu.Item header>Flambot Corp</Menu.Item>
+            <Menu.Item header><Icon name="globe"/>Flambot Corp </Menu.Item>
             <Menu.Item as='a'>
               <Link to="/signup">
                 Signup

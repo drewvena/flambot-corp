@@ -2,7 +2,7 @@ import React from 'react';
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
-import { Icon } from 'semantic-ui-react'
+import { Icon, Image } from 'semantic-ui-react'
 
 
 const CartItem = ({ item }) => {
@@ -41,9 +41,10 @@ const CartItem = ({ item }) => {
   return (
     <div className="flex-row">
       <div>
-        <img
+        <Image
           src={`/images/${item.image}`}
           alt=""
+          bordered
         />
       </div>
       <div>
