@@ -32,6 +32,8 @@ function ProductList() {
             {filterProducts().map(product => (
                 <div>
                     <ProductItem
+                        key= {product._id}
+                        _id={product._id}
                         name={product.name}
                         price={product.price}
                         description={product.description}
