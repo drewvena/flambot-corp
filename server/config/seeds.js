@@ -5,9 +5,9 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Black Shirts' },
-    { name: 'White Shirts' },
-    { name: 'Graphic Tees' }
+    { name: 'Men' },
+    { name: 'Women' },
+    { name: 'Cody' }
   ]);
 
 
@@ -18,47 +18,47 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Black Shirt',
+      name: 'For Cody',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'ferret.jpg',
-      category: categories[0]._id,
-      price: 15.99,
-      quantity: 5
-    },
-    {
-      name: 'White Shirt',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-        image: 'ferret.jpg',
-      category: categories[1]._id,
-      price: 15.99,
-      quantity: 5
-    },
-    {
-      name: 'White Long-Sleeve Shirt',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-        image: 'ferret.jpg',
-      category: categories[1]._id,
-      price: 20.99,
-      quantity: 5
-    },
-    {
-      name: 'Black Long-Sleeve Shirt',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-        image: 'ferret.jpg',
-      category: categories[0]._id,
-      price: 20.99,
-      quantity: 5
-    },
-    {
-      name: 'Graphic Long-Sleeve Shirt',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-        image: 'ferret.jpg',
+        "Are you an American terror named Cody looking for a sleeveless tee to show off your farmers tan at your buddy Kyle's cookout, look no further as we have the shirt for you!",
+      image: 'cody.jpg',
       category: categories[2]._id,
+      price: 15.99,
+      quantity: 5
+    },
+    {
+      name: 'Cornhole',
+      description:
+        'Sometimes the wife has gotta let you loose! Let everyone know with this shirt!',
+        image: 'cornhole.jpg',
+      category: categories[0]._id,
+      price: 15.99,
+      quantity: 5
+    },
+    {
+      name: 'Grumpy, Spoiled',
+      description:
+        "Born in a December? Crazy about your Man? Awesome wife? If you answered yes to all of these questions then you NEED this shirt for your husband! Let Melinda know she is not allowed to be on the same team as your husband during cornhole!",
+        image: 'grumpy.jpg',
+      category: categories[1]._id,
+      price: 20.99,
+      quantity: 5
+    },
+    {
+      name: 'June Guy',
+      description:
+        "Perfect tee for June guy's who've got some personality to them!",
+        image: 'juneGuy.jpg',
+      category: categories[0]._id,
+      price: 20.99,
+      quantity: 5
+    },
+    {
+      name: 'April Gardening',
+      description:
+        'Tired of being underestimated as an old lady gardener who was born in April? Let everyone know with this tee!',
+        image: 'lady.jpg',
+      category: categories[1]._id,
       price: 29.99,
       quantity: 3
     },
