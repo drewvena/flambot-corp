@@ -28,9 +28,10 @@ function ProductList() {
     };
     
     return (
-        <div>
+        <div className="my-2">
+     <div className="flex-row">
             {filterProducts().map(product => (
-                <div>
+
                     <ProductItem
                         key= {product._id}
                         _id={product._id}
@@ -40,8 +41,9 @@ function ProductList() {
                         image={product.image}
                         quantity={product.quantity}
                     />
-                </div>
+                
             ))}
+            </div>
         </div>
     )
 }
