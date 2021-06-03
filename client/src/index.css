@@ -1,6 +1,6 @@
 :root {
   --primary: #000000;
-  --secondary: #d2e6a5;
+  --secondary: #9eb9ff;
   --tertiary: #0d0e07;
   --light: #fafafa;
   --dark: #272f32;
@@ -221,6 +221,14 @@ ul {
 
 .error-text {
   color: var(--error);
+}
+
+h3.ui.header {
+  margin-top: 10px;
+}
+
+h6.ui.header {
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 768px) {

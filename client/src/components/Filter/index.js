@@ -30,7 +30,7 @@ function Filter() {
         <Container textAlign="center">
             <fieldset className="flex-row space-between my-20">
             <Menu text fluid widths={5} size='massive'>
-                <Menu.Item header>Filter:</Menu.Item>
+                <Menu.Item header>Shop:</Menu.Item>
                 <Menu.Item>
                 <input type='radio' id='all' value='all' name='category' onClick={() => {click('')}}/>
                 <label htmlFor='all'>All</label>

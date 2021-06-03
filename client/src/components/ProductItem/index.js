@@ -4,7 +4,7 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
-
+import { Image, Button, Header, icon } from "semantic-ui-react"
 
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
@@ -44,17 +44,20 @@ function ProductItem(item) {
   return (
     <div className="card px-1 py-1">
       <Link to={`/products/${_id}`}>
-        <img
+        <Image
           alt={name}
           src={`/images/${image}`}
         />
-        <p>{name}</p>
+        <Header as="h3">{name}
+        <Header.Subheader>Only {quantity} {pluralize("shirt", quantity)} left!</Header.Subheader>
+        </Header>
       </Link>
-      <div>
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
-        <span>${price}</span>
-      </div>
-      <button onClick={addToCart}>Add to cart</button>
+      <Header as="h6">
+      </Header>
+      <Button primary animated="vertical" onClick={addToCart}>
+        <Button.Content hidden>Add To Cart</Button.Content>
+        <Button.Content visible>${price}</Button.Content>
+      </Button>
     </div>
   );
 }
