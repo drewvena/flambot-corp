@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN } from "../utils/mutations"
 import Auth from "../utils/auth";
+import {Header, Form, Input, Label, Button, Checkbox} from "semantic-ui-react";
 
 const Login = () => {
     function showPass() {
@@ -38,17 +39,19 @@ const Login = () => {
 
     return (
         <div className="container my-20">
-            <h2>Login!</h2>
-            <form onSubmit={handleFormSubmit}>
-                <label htmlFor="email">Email: </label>
-                <input type='email' name='email' placeholder="email@gmail.com" onChange={handleChange}></input>
-                <label htmlFor='password'>Password: </label>
-                <input type='password' name='password' id='pass' onChange={handleChange}></input>
-                <label htmlFor='check'>Show password</label>
-                <input type='checkbox' name='check' onClick={showPass}></input>
-                <button type='submit'>Submit</button>
+            <Header as="h1">Login!</Header>
+            <Form onSubmit={handleFormSubmit}>
+                <Form.Group widths="equal">
+                    <Form.Field control= {Input} htmlFor="email" type='email' name='email' label="Email" placeholder="email@gmail.com" onChange={handleChange}/>
+                    <Form.Field control= {Input} htmlFor='password' type='password' name='password' label="Password" id='pass' onChange={handleChange}/>
+                </Form.Group>
+                <Form.Group widths="equal">
+                    <Form.Field control={Button} primary type='submit'>Submit</Form.Field>
+                    <Form.Field control = {Checkbox} htmlFor='check' label="Show password" onChange={showPass}/>
+                </Form.Group>
+
                 <h3>Or, <Link to='/signup'>click here to sign up</Link></h3>
-            </form>
+            </Form>
         </div>
     );
 };
