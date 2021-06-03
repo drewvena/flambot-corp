@@ -1,6 +1,6 @@
 :root {
   --primary: #000000;
-  --secondary: #9eb9ff;
+  --secondary: #4388ff;
   --tertiary: #0d0e07;
   --light: #fafafa;
   --dark: #272f32;
@@ -238,6 +238,14 @@ h6.ui.header {
 .ui.medium.centered.image {
   object-fit: cover;
   height:230px;
+}
+
+.ui.large.centered.image {
+  transition: 2s;
+}
+
+.ui.large.centered.image:hover {
+  transform: scale(1.5);
 }
 
 @media screen and (max-width: 768px) {
