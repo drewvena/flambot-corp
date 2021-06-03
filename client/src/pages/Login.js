@@ -37,7 +37,7 @@ const Login = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container my-20">
             <h2>Login!</h2>
             <form onSubmit={handleFormSubmit}>
                 <label htmlFor="email">Email: </label>
