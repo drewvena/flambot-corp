@@ -235,8 +235,18 @@ h6.ui.header {
   margin-top: 10px;
 }
 
+.ui.medium.centered.image {
+  object-fit: cover;
+  height:230px;
+}
+
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
+  }
+
+  .ui.medium.centered.image {
+    object-fit: cover;
+    height:400px;
   }
 }

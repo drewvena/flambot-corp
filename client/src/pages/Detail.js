@@ -104,7 +104,8 @@ function Detail() {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column>
-                <Image
+                <Image centered
+                size="large"
                 src={`/images/${currentProduct.image}`}
                 alt={currentProduct.name}
                 />
