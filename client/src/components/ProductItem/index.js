@@ -55,7 +55,7 @@ function ProductItem(item) {
       <Header as="h6">
       </Header>
       <Button primary animated="vertical" onClick={addToCart}>
-        <Button.Content hidden>Add To Cart</Button.Content>
+        <Button.Content hidden>Bag It!</Button.Content>
         <Button.Content visible>${price}</Button.Content>
       </Button>
     </div>

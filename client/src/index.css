@@ -223,6 +223,10 @@ ul {
   color: var(--error);
 }
 
+h1.ui.header {
+  margin-top: 40px;
+}
+
 h3.ui.header {
   margin-top: 10px;
 }

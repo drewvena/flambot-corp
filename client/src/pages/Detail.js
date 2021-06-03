@@ -12,6 +12,7 @@ import {
 } from "../utils/actions";
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
+import { Button, Header, Segment, Image, Grid, Icon, Divider } from "semantic-ui-react"
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
@@ -84,36 +85,53 @@ function Detail() {
   return (
     <>
       {currentProduct && cart ? (
-        <div className="container my-1">
-          <Link to="/">
-            ← Back to Products
-          </Link>
+        <div className="container my-20">
+          <Grid columns={2}>
+            <Grid.Row>
+              <Grid.Column>
+              <Header.Subheader>
+                    <Link to="/">
+                      <Icon fitted name="arrow alternate circle left outline"/>
+                    Back to Products
+                    </Link>
+                  </Header.Subheader>
+              </Grid.Column>
+              <Grid.Column>
+                <Header textAlign="left" as="h1">{currentProduct.name}
+                  
+                </Header>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column>
+                <Image
+                src={`/images/${currentProduct.image}`}
+                alt={currentProduct.name}
+                />
+              </Grid.Column>
 
-          <h2>{currentProduct.name}</h2>
+              <Grid.Column>
+                <Segment >
+                  {currentProduct.description}
+                  <Divider/>
+                  <Header as="h4">Price: ${currentProduct.price} </Header>
+                  <Button primary onClick={addToCart}>
+                    Bag This Swag
+                  </Button>
+                  <Button 
+                    disabled={!cart.find(p => p._id === currentProduct._id)} 
+                    onClick={removeFromCart}
+                    primary
+                  >
+                    Remove Swag
+                  </Button>
+                </Segment>
+              </Grid.Column>
 
-          <p>
-            {currentProduct.description}
-          </p>
+            </Grid.Row>
 
-          <p>
-            <strong>Price:</strong>
-            ${currentProduct.price}
-            {" "}
-            <button onClick={addToCart}>
-              Add to Cart
-            </button>
-            <button 
-              disabled={!cart.find(p => p._id === currentProduct._id)} 
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-            </button>
-          </p>
-
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
+          </Grid>
+        
         </div>
       ) : null}
     
