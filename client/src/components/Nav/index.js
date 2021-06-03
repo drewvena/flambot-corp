@@ -11,7 +11,9 @@ function Nav() {
       if (Auth.loggedIn()) {
         return (
           <Menu horizontal link inverted  size='massive' >
-            <Menu.Item header><Icon name="globe"/>Flambot Corp </Menu.Item>
+              <Link to="/">
+              <Menu.Item header><Icon name="globe"/>Flambot Corp </Menu.Item>
+              </Link>
             <Menu.Item as='a'>
                 <Link to="/orderHistory">
                   Order History
@@ -27,8 +29,10 @@ function Nav() {
       } else {
         return (
           <Menu horizontal link inverted  size='massive' >
-            <Menu.Item header><Icon name="globe"/>Flambot Corp </Menu.Item>
-            <Menu.Item as='a'>
+              <Link to="/">
+              <Menu.Item header><Icon name="globe"/>Flambot Corp </Menu.Item>
+              </Link>            
+              <Menu.Item as='a'>
               <Link to="/signup">
                 Signup
               </Link>
