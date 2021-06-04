@@ -11,6 +11,8 @@ import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
 import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
+import Footer from "./components/Footer";
+
 // import { idbPromise } from './utils/helpers';
 const client = new ApolloClient({
   request: (operation) => {
@@ -38,6 +40,7 @@ function App() {
             <Route exact path="/products/:id" component={Detail} /> 
             <Route component={NoMatch} />
           </Switch>
+          <Footer />
         </StoreProvider>
       </Router>
     </ApolloProvider>
