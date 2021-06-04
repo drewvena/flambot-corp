@@ -49,6 +49,7 @@ function Nav() {
 
   return (
       <Menu inverted fixed='top'>
+        
               {showNavigation()}
               <Cart />
 
