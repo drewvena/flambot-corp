@@ -50,7 +50,7 @@ function ProductItem(item) {
           src={`/images/${image}`}
         />
         <Header as="h3">{name}
-        <Header.Subheader>Only {quantity} {pluralize("shirt", quantity)} left!</Header.Subheader>
+        
         </Header>
       </Link>
       <Header as="h6">
