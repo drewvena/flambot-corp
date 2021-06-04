@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, Grid} from 'semantic-ui-react'
+import { Menu, Grid, Header, Segment} from 'semantic-ui-react'
 
 function Footer() {
     return (
       <>
 
-        <div style={{backgroundColor:'yellow', height:'20vh', textAlign:'center'}}>
+        <Segment basic style={{backgroundColor:'yellow', height:'20vh', textAlign:'center', paddingTop:"20px"}}>
 
-              <p style={{paddingTop:'30px' }}>Get a 15% discount coupon CODE: F1412</p>
-              
+              <Header as="h1">Get a 15% discount coupon</Header>
+              <Header subheader>CODE: F1412</Header>
 
-        </div>
+        </Segment>
         <Menu horizontal link inverted  size='small' widths = {5} >
             
             <Menu.Item as='a'>
