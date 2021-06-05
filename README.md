@@ -31,3 +31,17 @@ https://github.com/drewvena/flambot-corp
 https://flambot-corp.herokuapp.com/
 
 ## Snapshots
+
+![Screen Shot 2021-06-05 at 1 59 52 PM](https://user-images.githubusercontent.com/69886471/120904381-ab8fbe00-c611-11eb-86d9-97ebb506a933.png)
+
+![Screen Shot 2021-06-05 at 2 00 44 PM](https://user-images.githubusercontent.com/69886471/120904390-b6e2e980-c611-11eb-9167-457f9db7a67e.png)
+
+![Screen Shot 2021-06-05 at 2 01 16 PM](https://user-images.githubusercontent.com/69886471/120904401-c19d7e80-c611-11eb-9ac3-618cc22ab97d.png)
+
+![Screen Shot 2021-06-05 at 2 02 31 PM](https://user-images.githubusercontent.com/69886471/120904405-c82bf600-c611-11eb-8324-4e2bc6f98983.png)
+
+Screen Shot 2021-06-05 at 2.05.15 PM![image](https://user-images.githubusercontent.com/69886471/120904419-d843d580-c611-11eb-8c6b-cae06d1cb26f.png)
+
+Screen Shot 2021-06-05 at 2.07.30 PM![image](https://user-images.githubusercontent.com/69886471/120904427-e134a700-c611-11eb-80d6-bed3ea0ce6f7.png)
+
+Screen Shot 2021-06-05 at 2.10.46 PM![image](https://user-images.githubusercontent.com/69886471/120904433-edb8ff80-c611-11eb-94c7-5f7966e4e4e9.png)
