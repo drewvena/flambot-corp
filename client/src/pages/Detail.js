@@ -12,7 +12,7 @@ import {
 } from "../utils/actions";
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
-import { Button, Header, Segment, Image, Grid, Icon, Divider } from "semantic-ui-react"
+import { Button, Header, Segment, Image, Grid, Icon, Divider, Dropdown } from "semantic-ui-react"
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
@@ -82,6 +82,39 @@ function Detail() {
     idbPromise('cart', 'delete', { ...currentProduct });
   };
 
+  const sizes = [
+    {
+      key: 'XS',
+      text: 'XS',
+      value: 'XS',
+    },
+    {
+      key: 'Small',
+      text: 'Small',
+      value: 'Small',
+    },
+    {
+      key: 'Medium',
+      text: 'Medium',
+      value: 'Medium',
+    },
+    {
+      key: 'Large',
+      text: 'Large',
+      value: 'Large',
+    },
+    {
+      key: 'XL',
+      text: 'XL',
+      value: 'XL',
+    },
+    {
+      key: 'XXL',
+      text: 'XXL',
+      value: 'XXL',
+    },
+  ]
+
   return (
     <>
       {currentProduct && cart ? (
@@ -112,20 +145,24 @@ function Detail() {
               </Grid.Column>
 
               <Grid.Column>
-                <Segment >
+                <Segment>
                   {currentProduct.description}
                   <Divider/>
                   <Header as="h4">Price: ${currentProduct.price} </Header>
-                  <Button primary onClick={addToCart}>
-                    Bag This Swag
-                  </Button>
-                  <Button 
-                    disabled={!cart.find(p => p._id === currentProduct._id)} 
-                    onClick={removeFromCart}
-                    primary
-                  >
-                    Remove Swag
-                  </Button>
+                  <Header>
+                    <Dropdown placeholder='Size' fluid selection options={sizes}/>
+                  </Header>
+                    
+                    <Button primary onClick={addToCart}>
+                      Bag This Swag
+                    </Button>
+                    <Button 
+                      disabled={!cart.find(p => p._id === currentProduct._id)} 
+                      onClick={removeFromCart}
+                      primary
+                    >
+                      Remove Swag
+                    </Button>                  
                 </Segment>
               </Grid.Column>
 
