@@ -8,7 +8,7 @@ This is a REACT Global State application project for our full stack JavaScrip de
 
 * Please deploy application at Heroku
 * Users would be able to click on store app name Flambot Corp, and open a list of t-shirt products for sale with their own descriptions.
-* Users can buy t-shirts filtered by selection on color, grafic kind, and sleeve size.
+* Users can buy t-shirts filtered by selection on color, graphic kind, and sleeve size.
 * Users would be able to sign up/login to checkout products that where already selected in shopping cart. 
 * Once you activate checkout button, you will be able to fill out credit cart information, using Stripe-checkout, having at the same time a list of your already selected products altogether with their descriptions.
 * After success message on payment, you will be redirected to main page of application.
@@ -27,5 +27,7 @@ This is a REACT Global State application project for our full stack JavaScrip de
 ## Links
 
 https://github.com/drewvena/flambot-corp
+
+https://flambot-corp.herokuapp.com/
 
 ## Snapshots
