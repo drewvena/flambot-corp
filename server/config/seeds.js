@@ -150,9 +150,9 @@ db.once('open', async () => {
 
   await User.create({
     firstName: 'Drew',
-    lastName: 'Vena',
-    email: 'Drewvena1@gmail.com',
-    password: 'imsweet66',
+    lastName: 'Valer',
+    email: 'Drobus@gmail.com',
+    password: 'imswonky',
     orders: [
       
     ]
